@@ -1,0 +1,27 @@
+{
+	"name": "podsquad",
+	"version": "1.0.0",
+	"description": "Podsquad es el podcast donde se comparten historias de gente común, ciudadanos de a pie, cuya vida dio un vuelco de 180º por un acto consciente o deliberado, accidental o provocado, una decisión mal tomada o poco acertada y... PUM! La vida se convierte en un infierno.",
+	"main": "index.js",
+	"type": "module",
+	"packageManager": "pnpm@*",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "pnpx eslint ."
+	},
+	"keywords": [
+		"podsquad"
+	],
+	"author": "David Llopis Laguna",
+	"license": "MIT",
+	"devDependencies": {
+		"@eslint/js": "^9.16.0",
+		"eslint": "^9.16.0",
+		"globals": "^15.12.0",
+		"pino": "^9.5.0",
+		"typescript-eslint": "^8.16.0"
+	}
+}
