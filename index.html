@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Podsquad</title>
+		<style>
+			@font-face {
+				font-family: 'Advent-Psychosis';
+				src: url('./assets/fonts/Advent_Psychosis.ttf') format('truetype');
+				font-style: normal;
+				font-weight: normal;
+			}
+			@font-face {
+				font-family: 'Bad-Quality';
+				src: url('./assets/fonts/Bad_Quality.ttf') format('truetype');
+				font-style: normal;
+				font-weight: normal;
+			}
+			@font-face {
+				font-family: 'cordelina';
+				src: url('./assets/fonts/cordelina.otf') format('opentype');
+				font-style: normal;
+				font-weight: normal;
+			}
+			@font-face {
+				font-family: 'Cuomotype';
+				src: url('./assets/fonts/Cuomotype.otf') format('opentype');
+				font-style: normal;
+				font-weight: normal;
+			}
+			@font-face {
+				font-family: 'Schablonierschrift-Cracked';
+				src: url('./assets/fonts/DIN_Schablonierschrift_Cracked.ttf')
+					format('truetype');
+				font-style: normal;
+				font-weight: normal;
+			}
+			@font-face {
+				font-family: 'HVD-Poster';
+				src: url('./assets/fonts/HVD_Poster.ttf') format('truetype');
+				font-style: normal;
+				font-weight: normal;
+			}
+			@font-face {
+				font-family: 'HVD-Poster-Clean';
+				src: url('./assets/fonts/HVD_Poster_Clean.ttf') format('truetype');
+				font-style: normal;
+				font-weight: normal;
+			}
+			@font-face {
+				font-family: 'tiza';
+				src: url('./assets/fonts/tiza.ttf') format('truetype');
+				font-style: normal;
+				font-weight: normal;
+			}
+			@font-face {
+				font-family: 'WickedGrit';
+				src: url('./assets/fonts/WickedGrit.ttf') format('truetype');
+				font-style: normal;
+				font-weight: normal;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			svg {
+				/* height: 700px; */
+				/* width: 1280px; */
+				& text {
+					background-color: transparent;
+					font-family: 'WickedGrit', 'Roboto', sans-serif;
+				}
+			}
+		</style>
+		<script type="module">
+			import { Temporal } from 'https://cdn.jsdelivr.net/npm/@js-temporal/polyfill@0.4.4/+esm';
+			const { Now } = Temporal;
+			console.log({
+				Temporal,
+				Now,
+				plainDateTimeISO: Now.plainDateTimeISO(),
+				instant: Now.instant(),
+				json: JSON.stringify({
+					plainDateTimeISO: Now.plainDateTimeISO(),
+					instant: Now.instant(),
+				}),
+			});
+		</script>
+	</head>
+	<body>
+		<svg viewBox="0 0 1280 700" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<!-- Máscara con texto -->
+				<mask id="text-mask">
+					<!-- Fondo blanco de la máscara (opaco) -->
+					<rect width="100%" height="100%" fill="white" />
+
+					<!-- Texto negro (transparente en la máscara) -->
+					<text x="25" y="425" font-size="200" fill="black">Podsquad</text>
+				</mask>
+			</defs>
+
+			<!-- Imagen de fondo -->
+			<image
+				href="assets/sun-earth-stars-space-digital-art-4k.jpg"
+				width="1280"
+				height="700"
+			/>
+
+			<!-- Rectángulo negro con la máscara aplicada -->
+			<rect width="100%" height="100%" fill="#1a1a1a" mask="url(#text-mask)" />
+		</svg>
+	</body>
+</html>
